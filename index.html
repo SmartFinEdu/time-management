@@ -217,12 +217,12 @@
     );
 
     const TitleBadge = ({ text, color = "bg-indigo-600", textColor = "text-white", subtitle }) => (
-      <div className="flex flex-col items-center mb-4 md:mb-6 text-center">
-        <div className={`${color} ${textColor} text-2xl md:text-4xl lg:text-5xl font-black py-4 px-8 md:px-10 rounded-3xl shadow-xl border-4 border-white transform -rotate-1 transition-transform hover:rotate-0 duration-300`}>
+      <div className="flex flex-col items-center mb-2 text-center">
+        <div className={`${color} ${textColor} text-xl md:text-3xl font-black py-2 px-6 rounded-2xl shadow-lg border-2 border-white transform -rotate-1`}>
           {text}
         </div>
         {subtitle && (
-          <p className="mt-4 text-slate-700 font-bold text-lg md:text-2xl max-w-3xl leading-snug">
+          <p className="mt-2 text-slate-700 font-bold text-sm md:text-lg max-w-4xl leading-tight">
             {subtitle}
           </p>
         )}
@@ -329,37 +329,37 @@
         switch (currentSlide) {
           case 0:
             return (
-              <div className="text-center relative py-4 md:py-8 flex flex-col items-center w-full max-w-5xl mx-auto">
-                <div className="flex gap-4 md:gap-6 mb-6">
-                  <span className="p-4 md:p-6 bg-indigo-100 text-indigo-600 rounded-3xl animate-bounce shadow-lg">
-                    <i className="fa-solid fa-compass text-4xl md:text-5xl"></i>
+              <div className="text-center relative py-2 flex flex-col items-center w-full max-w-6xl mx-auto">
+                <div className="flex gap-4 mb-3">
+                  <span className="p-3 bg-indigo-100 text-indigo-600 rounded-2xl animate-bounce shadow-md">
+                    <i className="fa-solid fa-compass text-3xl"></i>
                   </span>
-                  <span className="p-4 md:p-6 bg-emerald-100 text-emerald-600 rounded-3xl animate-pulse shadow-lg">
-                    <i className="fa-solid fa-clock text-4xl md:text-5xl"></i>
+                  <span className="p-3 bg-emerald-100 text-emerald-600 rounded-2xl animate-pulse shadow-md">
+                    <i className="fa-solid fa-clock text-3xl"></i>
                   </span>
-                  <span className="p-4 md:p-6 bg-amber-100 text-amber-600 rounded-3xl animate-bounce shadow-lg" style={{ animationDelay: '0.15s' }}>
-                    <i className="fa-solid fa-chart-line text-4xl md:text-5xl"></i>
+                  <span className="p-3 bg-amber-100 text-amber-600 rounded-2xl animate-bounce shadow-md" style={{ animationDelay: '0.15s' }}>
+                    <i className="fa-solid fa-chart-line text-3xl"></i>
                   </span>
                 </div>
                 
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-slate-800 mb-6 tracking-tight leading-tight">
+                <h1 className="text-3xl md:text-5xl font-black text-slate-800 mb-3 tracking-tight leading-tight">
                   Планування — <br/>
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 inline-block mt-2">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 inline-block">
                     Фундамент успіху в бізнесі
                   </span>
                 </h1>
                 
-                <div className="bg-indigo-600 text-white text-lg md:text-2xl font-black py-3 px-8 md:px-10 rounded-full mb-8 shadow-xl border-4 border-white transform rotate-1">
+                <div className="bg-indigo-600 text-white text-sm md:text-lg font-black py-2 px-6 rounded-full mb-4 shadow-lg border-2 border-white transform rotate-1">
                   Інтерактивний модуль • «Підприємництво і фінансова грамотність»
                 </div>
                 
-                <div className="max-w-3xl w-full bg-white/90 backdrop-blur-md rounded-3xl p-6 md:p-10 shadow-2xl border border-slate-200 text-left space-y-6">
-                  <p className="text-lg md:text-2xl text-slate-700 leading-relaxed font-semibold">
+                <div className="max-w-4xl w-full bg-white/90 backdrop-blur-md rounded-2xl p-5 shadow-xl border border-slate-200 text-left space-y-4">
+                  <p className="text-base md:text-xl text-slate-700 leading-relaxed font-semibold">
                     Вітаємо! У цьому інтерактивному сервісі ви опануєте навички тайм-менеджменту: навчитеся перетворювати хаотичні ідеї на чіткі бізнес-плани, застосовувати Матрицю Ейзенхауера, Принцип Парето 80/20, метод Pomodoro та керувати власними часовими ресурсами!
                   </p>
                   
-                  <div className="pt-6 border-t-2 border-slate-100">
-                    <label className="block text-base md:text-xl font-extrabold text-slate-800 mb-3">
+                  <div className="pt-3 border-t border-slate-200">
+                    <label className="block text-sm md:text-base font-extrabold text-slate-800 mb-2">
                       <i className="fa-solid fa-user-pen text-indigo-600 mr-2"></i>
                       Введіть ім'я та прізвище для персоналізованого сертифіката:
                     </label>
@@ -368,7 +368,7 @@
                       value={userName}
                       onChange={(e) => setUserName(e.target.value)}
                       placeholder="Наприклад: Марія Коваленко"
-                      className="w-full px-5 py-4 rounded-2xl border-2 border-slate-300 focus:border-indigo-500 focus:outline-none text-slate-800 font-bold text-lg md:text-2xl shadow-inner"
+                      className="w-full px-4 py-3 rounded-xl border-2 border-slate-300 focus:border-indigo-500 focus:outline-none text-slate-800 font-bold text-base md:text-xl shadow-inner"
                     />
                   </div>
                 </div>
@@ -377,7 +377,7 @@
 
           case 1:
             return (
-              <div className="w-full max-w-5xl mx-auto">
+              <div className="w-full max-w-6xl mx-auto">
                 <TitleBadge 
                   text="Кейс-челендж: Від хаосу до конструктора" 
                   color="bg-indigo-600" 
@@ -385,46 +385,44 @@
                   subtitle="Чому наявність одного й того самого ресурсу дає кардинально різний результат?"
                 />
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-                  {/* Scenario LEGO Chaos vs Plan */}
-                  <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border-4 border-rose-200 flex flex-col justify-between">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="bg-white rounded-2xl p-4 shadow-lg border-2 border-rose-200 flex flex-col justify-between">
                     <div>
-                      <div className="flex items-center gap-3 mb-4 text-rose-600 font-black text-2xl md:text-3xl">
-                        <i className="fa-solid fa-cubes-stacked text-3xl md:text-4xl"></i>
+                      <div className="flex items-center gap-2 mb-2 text-rose-600 font-black text-xl">
+                        <i className="fa-solid fa-cubes-stacked text-2xl"></i>
                         Сценарій А: Хаос деталей
                       </div>
-                      <p className="text-slate-700 text-base md:text-xl leading-relaxed mb-6 font-medium">
+                      <p className="text-slate-700 text-sm md:text-base leading-relaxed mb-3 font-medium">
                         Уявіть тисячу деталей LEGO, висипаних на стіл без інструкції. Дедлайн наближається, час спливає, ви хапаєте випадкові елементи, з'єднуєте їх навмання. 
                       </p>
-                      <div className="bg-rose-50 p-4 md:p-5 rounded-2xl border-2 border-rose-200 text-sm md:text-lg text-rose-950 font-bold">
+                      <div className="bg-rose-50 p-3 rounded-xl border border-rose-200 text-xs md:text-sm text-rose-950 font-bold">
                         ❌ Результат: Брак часу, розчарування, руйнування конструкції та виснаження.
                       </div>
                     </div>
                   </div>
 
-                  <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border-4 border-emerald-200 flex flex-col justify-between">
+                  <div className="bg-white rounded-2xl p-4 shadow-lg border-2 border-emerald-200 flex flex-col justify-between">
                     <div>
-                      <div className="flex items-center gap-3 mb-4 text-emerald-600 font-black text-2xl md:text-3xl">
-                        <i className="fa-solid fa-sitemap text-3xl md:text-4xl"></i>
+                      <div className="flex items-center gap-2 mb-2 text-emerald-600 font-black text-xl">
+                        <i className="fa-solid fa-sitemap text-2xl"></i>
                         Сценарій Б: Чіткий алгоритм
                       </div>
-                      <p className="text-slate-700 text-base md:text-xl leading-relaxed mb-6 font-medium">
+                      <p className="text-slate-700 text-sm md:text-base leading-relaxed mb-3 font-medium">
                         Ті самі тисяча деталей, але з покроковим планом та згрупованими блоками. Кожен крок прорахований, роль кожної деталі зрозуміла.
                       </p>
-                      <div className="bg-emerald-50 p-4 md:p-5 rounded-2xl border-2 border-emerald-200 text-sm md:text-lg text-emerald-950 font-bold">
+                      <div className="bg-emerald-50 p-3 rounded-xl border border-emerald-200 text-xs md:text-sm text-emerald-950 font-bold">
                         ✅ Результат: Створений деталізований проєкт точно у визначений термін!
                       </div>
                     </div>
                   </div>
                 </div>
 
-                {/* Reflection Challenge */}
-                <div className="mt-6 md:mt-8 bg-amber-50 rounded-3xl p-6 border-4 border-amber-300 text-slate-800">
-                  <h4 className="font-black text-lg md:text-2xl mb-2 flex items-center gap-3 text-amber-950">
-                    <i className="fa-solid fa-lightbulb text-amber-600 text-2xl"></i>
+                <div className="mt-4 bg-amber-50 rounded-2xl p-4 border-2 border-amber-300 text-slate-800">
+                  <h4 className="font-black text-base md:text-lg mb-1 flex items-center gap-2 text-amber-950">
+                    <i className="fa-solid fa-lightbulb text-amber-600 text-xl"></i>
                     Питання до роздумів та дискусії:
                   </h4>
-                  <p className="text-base md:text-xl text-slate-800 leading-relaxed font-semibold">
+                  <p className="text-sm md:text-base text-slate-800 leading-snug font-semibold">
                     Чи бували у вас ситуації у школі або власних проєктах, коли ресурси й енергія були, але через відсутність плану результат перетворився на хаос? Що саме стало «вузьким місцем»?
                   </p>
                 </div>
@@ -433,7 +431,7 @@
 
           case 2:
             return (
-              <div className="w-full max-w-5xl mx-auto">
+              <div className="w-full max-w-6xl mx-auto">
                 <TitleBadge 
                   text="Час — найдефіцитніший ресурс" 
                   color="bg-purple-600" 
@@ -441,39 +439,39 @@
                   subtitle="Мудрість Пітера Друкера про управління бізнесом та власною долею"
                 />
 
-                <div className="bg-white rounded-3xl p-6 md:p-10 shadow-2xl border-4 border-purple-200 mb-6">
-                  <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 mb-8">
-                    <div className="w-28 h-28 md:w-32 md:h-32 rounded-full bg-purple-600 text-white flex items-center justify-center font-black text-4xl md:text-5xl shadow-xl shrink-0">
+                <div className="bg-white rounded-2xl p-5 shadow-xl border-2 border-purple-200 mb-4">
+                  <div className="flex flex-col md:flex-row items-center gap-4 mb-4">
+                    <div className="w-20 h-20 rounded-full bg-purple-600 text-white flex items-center justify-center font-black text-3xl shadow-md shrink-0">
                       PD
                     </div>
                     <div>
-                      <blockquote className="italic text-slate-800 text-xl md:text-3xl font-black bg-purple-50 p-6 rounded-3xl border-l-8 border-purple-600 leading-snug">
+                      <blockquote className="italic text-slate-800 text-lg md:text-2xl font-black bg-purple-50 p-4 rounded-2xl border-l-4 border-purple-600 leading-snug">
                         «Час — це найбільш дефіцитний ресурс, і якщо ним не керувати, то все інше також залишиться некерованим».
                       </blockquote>
-                      <p className="text-sm md:text-lg text-purple-800 font-extrabold mt-3">
+                      <p className="text-xs md:text-sm text-purple-800 font-extrabold mt-2">
                         — Пітер Фердинанд Друкер, видатний теоретик менеджменту
                       </p>
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t-2 border-slate-100">
-                    <div className="p-5 bg-slate-50 rounded-2xl border-2 border-slate-200">
-                      <h4 className="font-black text-slate-900 text-lg md:text-xl mb-2">💡 Лідерство vs Управління</h4>
-                      <p className="text-base md:text-lg text-slate-700 leading-relaxed font-medium">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 border-t border-slate-100">
+                    <div className="p-4 bg-slate-50 rounded-xl border border-slate-200">
+                      <h4 className="font-black text-slate-900 text-base mb-1">💡 Лідерство vs Управління</h4>
+                      <p className="text-xs md:text-sm text-slate-700 leading-relaxed font-medium">
                         Управління — це вміння робити речі правильно. Лідерство — це вміння робити <strong>правильні речі</strong>.
                       </p>
                     </div>
 
-                    <div className="p-5 bg-slate-50 rounded-2xl border-2 border-slate-200">
-                      <h4 className="font-black text-slate-900 text-lg md:text-xl mb-2">🚀 Прогнозування майбутнього</h4>
-                      <p className="text-base md:text-lg text-slate-700 leading-relaxed font-medium">
+                    <div className="p-4 bg-slate-50 rounded-xl border border-slate-200">
+                      <h4 className="font-black text-slate-900 text-base mb-1">🚀 Прогнозування майбутнього</h4>
+                      <p className="text-xs md:text-sm text-slate-700 leading-relaxed font-medium">
                         Найкращий спосіб передбачити майбутнє свого бізнесу чи життя — це <strong>створити його власним планом</strong>.
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-indigo-50 rounded-3xl p-5 md:p-6 border-2 border-indigo-200 text-indigo-950 text-base md:text-xl font-bold">
+                <div className="bg-indigo-50 rounded-2xl p-4 border border-indigo-200 text-indigo-950 text-xs md:text-base font-bold">
                   ❓ <strong>Запитання для класу:</strong> Як ви розумієте відмінність між робленням справи швидко (бездоганно) та вибором найважливішої справи на день?
                 </div>
               </div>
@@ -481,7 +479,7 @@
 
           case 3:
             return (
-              <div className="w-full max-w-5xl mx-auto">
+              <div className="w-full max-w-6xl mx-auto">
                 <TitleBadge 
                   text="Компас капітана: 3 стовпи планування" 
                   color="bg-teal-600" 
@@ -489,45 +487,45 @@
                   subtitle="Аналогія морської експедиції у підприємництві"
                 />
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <div className="bg-white p-6 md:p-8 rounded-3xl shadow-xl border-4 border-teal-100 flex flex-col justify-between hover:border-teal-400 transition-all">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="bg-white p-5 rounded-2xl shadow-lg border-2 border-teal-100 flex flex-col justify-between hover:border-teal-400 transition-all">
                     <div>
-                      <div className="w-16 h-16 bg-teal-600 text-white rounded-2xl flex items-center justify-center text-3xl mb-4 shadow-md">
+                      <div className="w-12 h-12 bg-teal-600 text-white rounded-xl flex items-center justify-center text-2xl mb-3 shadow-sm">
                         <i className="fa-solid fa-bullseye"></i>
                       </div>
-                      <h4 className="font-black text-slate-900 text-xl md:text-2xl mb-3">1. Чіткі Цілі</h4>
-                      <p className="text-slate-700 text-base md:text-lg leading-relaxed font-medium">
+                      <h4 className="font-black text-slate-900 text-lg mb-2">1. Чіткі Цілі</h4>
+                      <p className="text-slate-700 text-xs md:text-sm leading-relaxed font-medium">
                         Визначення порту призначення. Без чіткої мети жоден вітер не буде попутним для вашого стартапу.
                       </p>
                     </div>
                   </div>
 
-                  <div className="bg-white p-6 md:p-8 rounded-3xl shadow-xl border-4 border-teal-100 flex flex-col justify-between hover:border-teal-400 transition-all">
+                  <div className="bg-white p-5 rounded-2xl shadow-lg border-2 border-teal-100 flex flex-col justify-between hover:border-teal-400 transition-all">
                     <div>
-                      <div className="w-16 h-16 bg-emerald-600 text-white rounded-2xl flex items-center justify-center text-3xl mb-4 shadow-md">
+                      <div className="w-12 h-12 bg-emerald-600 text-white rounded-xl flex items-center justify-center text-2xl mb-3 shadow-sm">
                         <i className="fa-solid fa-layer-group"></i>
                       </div>
-                      <h4 className="font-black text-slate-900 text-xl md:text-2xl mb-3">2. Пріоритети</h4>
-                      <p className="text-slate-700 text-base md:text-lg leading-relaxed font-medium">
+                      <h4 className="font-black text-slate-900 text-lg mb-2">2. Пріоритети</h4>
+                      <p className="text-slate-700 text-xs md:text-sm leading-relaxed font-medium">
                         Вибір найважливішого курсу. Вміння казати «ні» другорядним справам, що відволікають від головного.
                       </p>
                     </div>
                   </div>
 
-                  <div className="bg-white p-6 md:p-8 rounded-3xl shadow-xl border-4 border-teal-100 flex flex-col justify-between hover:border-teal-400 transition-all">
+                  <div className="bg-white p-5 rounded-2xl shadow-lg border-2 border-teal-100 flex flex-col justify-between hover:border-teal-400 transition-all">
                     <div>
-                      <div className="w-16 h-16 bg-cyan-600 text-white rounded-2xl flex items-center justify-center text-3xl mb-4 shadow-md">
+                      <div className="w-12 h-12 bg-cyan-600 text-white rounded-xl flex items-center justify-center text-2xl mb-3 shadow-sm">
                         <i className="fa-solid fa-route"></i>
                       </div>
-                      <h4 className="font-black text-slate-900 text-xl md:text-2xl mb-3">3. Оцінка курсу</h4>
-                      <p className="text-slate-700 text-base md:text-lg leading-relaxed font-medium">
+                      <h4 className="font-black text-slate-900 text-lg mb-2">3. Оцінка курсу</h4>
+                      <p className="text-slate-700 text-xs md:text-sm leading-relaxed font-medium">
                         Регулярне коригування дій під час штормів та змін ринку. Гнучкість — запорука виживання бізнесу.
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div className="mt-8 bg-white p-6 rounded-3xl shadow-md border-l-8 border-teal-500 text-base md:text-xl font-bold text-slate-800">
+                <div className="mt-5 bg-white p-4 rounded-2xl shadow-sm border-l-4 border-teal-500 text-xs md:text-base font-bold text-slate-800">
                   💬 <strong>Дискусійний челендж:</strong> Чому в сучасному бізнесі немає однієї «ідеальної та вічної» формули тайм-менеджменту для всіх людей?
                 </div>
               </div>
@@ -535,7 +533,7 @@
 
           case 4:
             return (
-              <div className="w-full max-w-5xl mx-auto">
+              <div className="w-full max-w-7xl mx-auto">
                 <TitleBadge 
                   text="Інтерактивна Матриця Ейзенхауера" 
                   color="bg-indigo-600" 
@@ -543,23 +541,22 @@
                   subtitle="Розподіліть завдання підлітка-підприємця за квадрантами"
                 />
 
-                <div className="bg-white rounded-3xl p-6 md:p-8 shadow-2xl border-4 border-indigo-200 max-h-[70vh] overflow-y-auto">
-                  {/* Task Pool */}
-                  <div className="mb-6">
-                    <h4 className="text-sm md:text-base font-black text-slate-500 uppercase tracking-wider mb-3">Натисніть на квадрант, щоб призначити обрану справу:</h4>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className="bg-white rounded-2xl p-4 shadow-xl border-2 border-indigo-200">
+                  <div className="mb-3">
+                    <h4 className="text-xs font-black text-slate-500 uppercase tracking-wider mb-2">Натисніть на квадрант, щоб призначити обрану справу:</h4>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
                       {eisenhowerTasks.map(t => (
-                        <div key={t.id} className={`p-4 rounded-2xl border-2 text-sm md:text-base font-bold flex justify-between items-center ${
+                        <div key={t.id} className={`p-2.5 rounded-xl border text-xs font-bold flex justify-between items-center ${
                           t.quad ? 'bg-indigo-50 border-indigo-300 text-indigo-900' : 'bg-slate-50 border-slate-300 text-slate-800'
                         }`}>
-                          <span className="mr-2">{t.title}</span>
-                          <div className="flex gap-1.5 shrink-0">
+                          <span className="mr-1 leading-tight">{t.title}</span>
+                          <div className="flex gap-1 shrink-0">
                             {['A', 'B', 'C', 'D'].map(q => (
                               <button
                                 key={q}
                                 onClick={() => placeTaskInQuad(t.id, q)}
-                                className={`w-8 h-8 rounded-xl font-black text-xs md:text-sm cursor-pointer ${
-                                  t.quad === q ? 'bg-indigo-600 text-white shadow-md' : 'bg-slate-200 text-slate-700 hover:bg-indigo-300'
+                                className={`w-6 h-6 rounded-lg font-black text-xs cursor-pointer ${
+                                  t.quad === q ? 'bg-indigo-600 text-white shadow-sm' : 'bg-slate-200 text-slate-700 hover:bg-indigo-300'
                                 }`}
                               >
                                 {q}
@@ -571,43 +568,42 @@
                     </div>
                   </div>
 
-                  {/* Quadrants Grid */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs md:text-sm">
-                    <div className="p-4 bg-rose-50 border-2 border-rose-300 rounded-2xl min-h-[120px]">
-                      <h5 className="font-black text-rose-900 text-base md:text-lg mb-1">Квадрант А: Терміново & Важливо</h5>
-                      <p className="text-xs md:text-sm text-rose-700 font-bold mb-3">Зробити негайно (Кризи)</p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
+                    <div className="p-3 bg-rose-50 border border-rose-300 rounded-xl min-h-[90px]">
+                      <h5 className="font-black text-rose-900 text-sm mb-0.5">Квадрант А: Терміново & Важливо</h5>
+                      <p className="text-[11px] text-rose-700 font-bold mb-2">Зробити негайно (Кризи)</p>
                       {eisenhowerTasks.filter(t => t.quad === 'A').map(t => (
-                        <div key={t.id} className="p-2.5 bg-white rounded-xl shadow-sm border border-rose-200 mb-2 font-bold text-rose-950 text-xs md:text-sm">
+                        <div key={t.id} className="p-2 bg-white rounded-lg shadow-sm border border-rose-200 mb-1 font-bold text-rose-950 text-xs">
                           {t.title}
                         </div>
                       ))}
                     </div>
 
-                    <div className="p-4 bg-emerald-50 border-2 border-emerald-300 rounded-2xl min-h-[120px]">
-                      <h5 className="font-black text-emerald-900 text-base md:text-lg mb-1">Квадрант B: Не терміново & Важливо</h5>
-                      <p className="text-xs md:text-sm text-emerald-700 font-bold mb-3">Запланувати (Стратегія та ріст)</p>
+                    <div className="p-3 bg-emerald-50 border border-emerald-300 rounded-xl min-h-[90px]">
+                      <h5 className="font-black text-emerald-900 text-sm mb-0.5">Квадрант B: Не терміново & Важливо</h5>
+                      <p className="text-[11px] text-emerald-700 font-bold mb-2">Запланувати (Стратегія та ріст)</p>
                       {eisenhowerTasks.filter(t => t.quad === 'B').map(t => (
-                        <div key={t.id} className="p-2.5 bg-white rounded-xl shadow-sm border border-emerald-200 mb-2 font-bold text-emerald-950 text-xs md:text-sm">
+                        <div key={t.id} className="p-2 bg-white rounded-lg shadow-sm border border-emerald-200 mb-1 font-bold text-emerald-950 text-xs">
                           {t.title}
                         </div>
                       ))}
                     </div>
 
-                    <div className="p-4 bg-amber-50 border-2 border-amber-300 rounded-2xl min-h-[120px]">
-                      <h5 className="font-black text-amber-900 text-base md:text-lg mb-1">Квадрант C: Терміново & Не важливо</h5>
-                      <p className="text-xs md:text-sm text-amber-700 font-bold mb-3">Делегувати (Відволікання)</p>
+                    <div className="p-3 bg-amber-50 border border-amber-300 rounded-xl min-h-[90px]">
+                      <h5 className="font-black text-amber-900 text-sm mb-0.5">Квадрант C: Терміново & Не важливо</h5>
+                      <p className="text-[11px] text-amber-700 font-bold mb-2">Делегувати (Відволікання)</p>
                       {eisenhowerTasks.filter(t => t.quad === 'C').map(t => (
-                        <div key={t.id} className="p-2.5 bg-white rounded-xl shadow-sm border border-amber-200 mb-2 font-bold text-amber-950 text-xs md:text-sm">
+                        <div key={t.id} className="p-2 bg-white rounded-lg shadow-sm border border-amber-200 mb-1 font-bold text-amber-950 text-xs">
                           {t.title}
                         </div>
                       ))}
                     </div>
 
-                    <div className="p-4 bg-slate-100 border-2 border-slate-300 rounded-2xl min-h-[120px]">
-                      <h5 className="font-black text-slate-900 text-base md:text-lg mb-1">Квадрант D: Не терміново & Не важливо</h5>
-                      <p className="text-xs md:text-sm text-slate-600 font-bold mb-3">Вилучити (Пожирачі часу)</p>
+                    <div className="p-3 bg-slate-100 border border-slate-300 rounded-xl min-h-[90px]">
+                      <h5 className="font-black text-slate-900 text-sm mb-0.5">Квадрант D: Не терміново & Не важливо</h5>
+                      <p className="text-[11px] text-slate-600 font-bold mb-2">Вилучити (Пожирачі часу)</p>
                       {eisenhowerTasks.filter(t => t.quad === 'D').map(t => (
-                        <div key={t.id} className="p-2.5 bg-white rounded-xl shadow-sm border border-slate-200 mb-2 font-bold text-slate-800 text-xs md:text-sm">
+                        <div key={t.id} className="p-2 bg-white rounded-lg shadow-sm border border-slate-200 mb-1 font-bold text-slate-800 text-xs">
                           {t.title}
                         </div>
                       ))}
@@ -619,7 +615,7 @@
 
           case 5:
             return (
-              <div className="w-full max-w-5xl mx-auto">
+              <div className="w-full max-w-6xl mx-auto">
                 <TitleBadge 
                   text="Принцип Парето 80/20 & Метод Pomodoro" 
                   color="bg-amber-500" 
@@ -627,37 +623,35 @@
                   subtitle="Техніки максимального фокусу та енергоефективності"
                 />
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-                  {/* Pareto */}
-                  <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border-4 border-amber-200 flex flex-col justify-between">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="bg-white rounded-2xl p-5 shadow-lg border-2 border-amber-200 flex flex-col justify-between">
                     <div>
-                      <div className="flex items-center gap-3 mb-4 text-amber-600 font-black text-2xl md:text-3xl">
-                        <i className="fa-solid fa-chart-pie text-3xl md:text-4xl"></i>
+                      <div className="flex items-center gap-2 mb-3 text-amber-600 font-black text-2xl">
+                        <i className="fa-solid fa-chart-pie text-3xl"></i>
                         Принцип Парето (80 / 20)
                       </div>
-                      <p className="text-slate-700 text-base md:text-xl leading-relaxed mb-6 font-medium">
+                      <p className="text-slate-700 text-sm md:text-lg leading-relaxed mb-4 font-medium">
                         20% ключових зусиль забезпечують 80% бізнес-результату. Решта 80% робіт дають лише 20% ефекту.
                       </p>
-                      <div className="bg-amber-50 p-4 md:p-5 rounded-2xl border-2 border-amber-300 text-sm md:text-lg text-amber-950 font-bold">
+                      <div className="bg-amber-50 p-3 rounded-xl border border-amber-300 text-xs md:text-sm text-amber-950 font-bold">
                         🎯 Задача підприємця: постійно шукати й виконувати саме ці 20% головних дій!
                       </div>
                     </div>
                   </div>
 
-                  {/* Pomodoro */}
-                  <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border-4 border-rose-200 flex flex-col justify-between">
+                  <div className="bg-white rounded-2xl p-5 shadow-lg border-2 border-rose-200 flex flex-col justify-between">
                     <div>
-                      <div className="flex items-center gap-3 mb-4 text-rose-600 font-black text-2xl md:text-3xl">
-                        <i className="fa-solid fa-stopwatch text-3xl md:text-4xl"></i>
+                      <div className="flex items-center gap-2 mb-3 text-rose-600 font-black text-2xl">
+                        <i className="fa-solid fa-stopwatch text-3xl"></i>
                         Метод Pomodoro
                       </div>
-                      <p className="text-slate-700 text-base md:text-xl leading-relaxed mb-6 font-medium">
+                      <p className="text-slate-700 text-sm md:text-lg leading-relaxed mb-4 font-medium">
                         1. Виберіть 1 завдання.<br/>
                         2. Працюйте <strong>25 хвилин</strong> без відволікань.<br/>
                         3. Зробіть перерву <strong>3-5 хвилин</strong>.<br/>
                         4. Після 4 циклів — довша перерва (15-30 хв).
                       </p>
-                      <div className="bg-rose-50 p-4 md:p-5 rounded-2xl border-2 border-rose-300 text-sm md:text-lg text-rose-950 font-bold">
+                      <div className="bg-rose-50 p-3 rounded-xl border border-rose-300 text-xs md:text-sm text-rose-950 font-bold">
                         🍅 Захищає мозок від виснаження та перевтоми!
                       </div>
                     </div>
@@ -668,7 +662,7 @@
 
           case 6:
             return (
-              <div className="w-full max-w-5xl mx-auto">
+              <div className="w-full max-w-6xl mx-auto">
                 <TitleBadge 
                   text="Лайфхаки: «З'їж жабу» & Time Blocking" 
                   color="bg-emerald-600" 
@@ -676,23 +670,23 @@
                   subtitle="Два потужні методи подолання прокрастинації"
                 />
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-                  <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border-4 border-emerald-200">
-                    <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-4xl font-black mb-4 shadow-md">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="bg-white rounded-2xl p-5 shadow-lg border-2 border-emerald-200">
+                    <div className="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-3xl font-black mb-3 shadow-sm">
                       <i className="fa-solid fa-frog"></i>
                     </div>
-                    <h3 className="text-2xl md:text-3xl font-black text-slate-800 mb-3">«З'їсти жабу зранку»</h3>
-                    <p className="text-slate-700 text-base md:text-xl leading-relaxed font-medium">
+                    <h3 className="text-xl md:text-2xl font-black text-slate-800 mb-2">«З'їсти жабу зранку»</h3>
+                    <p className="text-slate-700 text-sm md:text-base leading-relaxed font-medium">
                       «Жаба» — це найважча, найнеприємніша справа дня (наприклад, складний дзвінок клієнту чи рутинний звіт). Зробіть її найпершою, і увесь день ви відчуватимете легкість та продуктивність!
                     </p>
                   </div>
 
-                  <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border-4 border-blue-200">
-                    <div className="w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-4xl font-black mb-4 shadow-md">
+                  <div className="bg-white rounded-2xl p-5 shadow-lg border-2 border-blue-200">
+                    <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-3xl font-black mb-3 shadow-sm">
                       <i className="fa-solid fa-calendar-days"></i>
                     </div>
-                    <h3 className="text-2xl md:text-3xl font-black text-slate-800 mb-3">Time Blocking (Блокування часу)</h3>
-                    <p className="text-slate-700 text-base md:text-xl leading-relaxed font-medium">
+                    <h3 className="text-xl md:text-2xl font-black text-slate-800 mb-2">Time Blocking (Блокування часу)</h3>
+                    <p className="text-slate-700 text-sm md:text-base leading-relaxed font-medium">
                       Поділіть свій день на конкретні часові блоки (наприклад, 10:00-11:30 тільки робота над стартапом; 14:00-15:00 спорт). Ніяких хаотичних переключень задач!
                     </p>
                   </div>
@@ -702,7 +696,7 @@
 
           case 7:
             return (
-              <div className="w-full max-w-5xl mx-auto">
+              <div className="w-full max-w-6xl mx-auto">
                 <TitleBadge 
                   text="Органайзер vs Тайм-трекер" 
                   color="bg-indigo-600" 
@@ -710,32 +704,31 @@
                   subtitle="Лабораторія дослідження витрат часу та боротьби з «пожирачами часу»"
                 />
 
-                <div className="bg-white rounded-3xl p-6 md:p-8 shadow-2xl border-4 border-indigo-200 space-y-6 max-h-[70vh] overflow-y-auto">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="p-5 bg-indigo-50 rounded-2xl border-2 border-indigo-200">
-                      <h4 className="font-black text-indigo-900 text-lg md:text-2xl mb-2">📅 Органайзер (Планер)</h4>
-                      <p className="text-base md:text-lg text-indigo-800 font-medium leading-relaxed">
+                <div className="bg-white rounded-2xl p-5 shadow-xl border-2 border-indigo-200 space-y-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="p-4 bg-indigo-50 rounded-xl border border-indigo-200">
+                      <h4 className="font-black text-indigo-900 text-base md:text-xl mb-1">📅 Органайзер (Планер)</h4>
+                      <p className="text-xs md:text-sm text-indigo-800 font-medium leading-relaxed">
                         Інструмент майбутнього: фіксує дедлайни, плановані задачі, зустрічі та пріоритети на тиждень або місяць.
                       </p>
                     </div>
 
-                    <div className="p-5 bg-emerald-50 rounded-2xl border-2 border-emerald-200">
-                      <h4 className="font-black text-emerald-900 text-lg md:text-2xl mb-2">⏱️ Тайм-трекер</h4>
-                      <p className="text-base md:text-lg text-emerald-800 font-medium leading-relaxed">
+                    <div className="p-4 bg-emerald-50 rounded-xl border border-emerald-200">
+                      <h4 className="font-black text-emerald-900 text-base md:text-xl mb-1">⏱️ Тайм-трекер</h4>
+                      <p className="text-xs md:text-sm text-emerald-800 font-medium leading-relaxed">
                         Інструмент фактів: показує реальну хроніку дня, викриваючи прихованих «пожирачів часу» (соцмережі, прокрастинацію).
                       </p>
                     </div>
                   </div>
 
-                  {/* Tracker Interactive Showcase */}
-                  <div className="pt-2">
-                    <h5 className="font-black text-slate-800 text-base md:text-lg mb-3">Приклад вибірки хроніки дня з маркуванням:</h5>
-                    <div className="space-y-3">
+                  <div className="pt-1">
+                    <h5 className="font-black text-slate-800 text-sm md:text-base mb-2">Приклад вибірки хроніки дня з маркуванням:</h5>
+                    <div className="space-y-2">
                       {trackerTasks.map((item, i) => (
-                        <div key={i} className="flex flex-col sm:flex-row items-start sm:items-center justify-between p-4 bg-slate-50 rounded-2xl border-2 border-slate-200 gap-2">
-                          <span className="font-mono font-bold text-slate-600 text-sm md:text-base">{item.time}</span>
-                          <span className="font-extrabold text-slate-900 text-base md:text-lg">{item.activity}</span>
-                          <span className={`px-3 py-1.5 rounded-full text-xs md:text-sm font-black uppercase ${
+                        <div key={i} className="flex flex-col sm:flex-row items-start sm:items-center justify-between p-3 bg-slate-50 rounded-xl border border-slate-200 gap-2">
+                          <span className="font-mono font-bold text-slate-600 text-xs md:text-sm">{item.time}</span>
+                          <span className="font-extrabold text-slate-900 text-xs md:text-base">{item.activity}</span>
+                          <span className={`px-2.5 py-1 rounded-full text-xs font-black uppercase ${
                             item.type === 'useful' ? 'bg-emerald-100 text-emerald-900' :
                             item.type === 'routine' ? 'bg-blue-100 text-blue-900' : 'bg-rose-100 text-rose-900'
                           }`}>
@@ -751,7 +744,7 @@
 
           case 8:
             return (
-              <div className="w-full max-w-5xl mx-auto">
+              <div className="w-full max-w-6xl mx-auto">
                 <TitleBadge 
                   text="Челендж: «Острів Таймарія»" 
                   color="bg-purple-600" 
@@ -759,38 +752,38 @@
                   subtitle="Симуляція екстремальних умов: розподіліть ресурси екіпажу"
                 />
 
-                <div className="bg-white rounded-3xl p-6 md:p-8 shadow-2xl border-4 border-purple-200">
-                  <div className="bg-purple-50 p-5 rounded-2xl border-2 border-purple-200 mb-6 text-base md:text-xl text-purple-950 font-semibold leading-relaxed">
+                <div className="bg-white rounded-2xl p-5 shadow-xl border-2 border-purple-200">
+                  <div className="bg-purple-50 p-4 rounded-xl border border-purple-200 mb-4 text-sm md:text-base text-purple-950 font-semibold leading-relaxed">
                     🏴‍☠️ <strong>Ситуація:</strong> Ваш проєктний екіпаж висадився на острові Таймарія. Насувається шторм, карти втрачено, а частина провізії пошкоджена. У вас є 1 година до темряви!
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 text-sm md:text-base">
-                    <div className="p-5 rounded-2xl border-2 border-indigo-200 bg-indigo-50/50 flex flex-col justify-between">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs md:text-sm">
+                    <div className="p-4 rounded-xl border border-indigo-200 bg-indigo-50/50 flex flex-col justify-between">
                       <div>
-                        <span className="font-black text-indigo-900 text-lg md:text-xl">1. Рятувальний прихисток</span>
-                        <p className="text-slate-700 font-medium mt-2">Зведення намету та захист від вітру (Стратегічна база).</p>
+                        <span className="font-black text-indigo-900 text-base">1. Рятувальний прихисток</span>
+                        <p className="text-slate-700 font-medium mt-1 text-xs">Зведення намету та захист від вітру (Стратегічна база).</p>
                       </div>
-                      <div className="mt-4 text-indigo-800 font-extrabold bg-indigo-100 p-3 rounded-xl text-xs md:text-sm">
+                      <div className="mt-3 text-indigo-800 font-extrabold bg-indigo-100 p-2 rounded-lg text-xs">
                         Пріоритет #1 (Квадрант А)
                       </div>
                     </div>
 
-                    <div className="p-5 rounded-2xl border-2 border-amber-200 bg-amber-50/50 flex flex-col justify-between">
+                    <div className="p-4 rounded-xl border border-amber-200 bg-amber-50/50 flex flex-col justify-between">
                       <div>
-                        <span className="font-black text-amber-900 text-lg md:text-xl">2. Розподіл ролей</span>
-                        <p className="text-slate-700 font-medium mt-2">Делегування: один шукає воду, другий складає мапу, третій розпалює вогонь.</p>
+                        <span className="font-black text-amber-900 text-base">2. Розподіл ролей</span>
+                        <p className="text-slate-700 font-medium mt-1 text-xs">Делегування: один шукає воду, другий складає мапу, третій розпалює вогонь.</p>
                       </div>
-                      <div className="mt-4 text-amber-800 font-extrabold bg-amber-100 p-3 rounded-xl text-xs md:text-sm">
+                      <div className="mt-3 text-amber-800 font-extrabold bg-amber-100 p-2 rounded-lg text-xs">
                         Делегування (Команда)
                       </div>
                     </div>
 
-                    <div className="p-5 rounded-2xl border-2 border-emerald-200 bg-emerald-50/50 flex flex-col justify-between">
+                    <div className="p-4 rounded-xl border border-emerald-200 bg-emerald-50/50 flex flex-col justify-between">
                       <div>
-                        <span className="font-black text-emerald-900 text-lg md:text-xl">3. Оцінка втрат</span>
-                        <p className="text-slate-700 font-medium mt-2">Коригування планів відповідно до реальних залишків часу та сил.</p>
+                        <span className="font-black text-emerald-900 text-base">3. Оцінка втрат</span>
+                        <p className="text-slate-700 font-medium mt-1 text-xs">Коригування планів відповідно до реальних залишків часу та сил.</p>
                       </div>
-                      <div className="mt-4 text-emerald-800 font-extrabold bg-emerald-100 p-3 rounded-xl text-xs md:text-sm">
+                      <div className="mt-3 text-emerald-800 font-extrabold bg-emerald-100 p-2 rounded-lg text-xs">
                         Оцінка курсу
                       </div>
                     </div>
@@ -801,7 +794,7 @@
 
           case 9:
             return (
-              <div className="w-full max-w-5xl mx-auto">
+              <div className="w-full max-w-7xl mx-auto">
                 <TitleBadge 
                   text='Експрес-тест: "Так чи Ні?"' 
                   color="bg-emerald-600" 
@@ -809,7 +802,7 @@
                   subtitle="Дайте відповіді на 8 запитань за темою уроку (Максимум: 8 балів)"
                 />
 
-                <div className="bg-white rounded-3xl p-4 md:p-8 shadow-2xl border-4 border-emerald-200 space-y-4 max-h-[65vh] overflow-y-auto">
+                <div className="bg-white rounded-2xl p-4 shadow-xl border-2 border-emerald-200 grid grid-cols-1 md:grid-cols-2 gap-2">
                   {trueFalseQuestions.map((q, idx) => {
                     const isAnswered = tfAnswers[idx] !== undefined;
                     const isCorrect = tfAnswers[idx] === q.answer;
@@ -817,21 +810,21 @@
                     return (
                       <div 
                         key={idx} 
-                        className={`p-4 md:p-5 rounded-2xl border-2 transition-all ${
+                        className={`p-2.5 rounded-xl border transition-all flex flex-col justify-between ${
                           isAnswered 
                             ? (isCorrect ? 'bg-emerald-50 border-emerald-300' : 'bg-rose-50 border-rose-300') 
                             : 'border-slate-200 hover:border-emerald-300 bg-slate-50'
                         }`}
                       >
-                        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                          <p className="font-bold text-slate-900 text-base md:text-xl flex-1 leading-snug">
+                        <div className="flex justify-between items-center gap-2">
+                          <p className="font-bold text-slate-900 text-xs md:text-sm flex-1 leading-tight">
                             {idx + 1}. {q.text}
                           </p>
-                          <div className="flex gap-3 shrink-0 self-end md:self-auto">
+                          <div className="flex gap-1.5 shrink-0">
                             <button 
                               disabled={isAnswered}
                               onClick={() => handleTfAnswer(idx, true)}
-                              className={`px-5 py-2.5 rounded-xl font-black text-sm md:text-base transition-all cursor-pointer ${
+                              className={`px-3 py-1 rounded-lg font-black text-xs transition-all cursor-pointer ${
                                 isAnswered 
                                   ? (tfAnswers[idx] === true ? 'bg-emerald-600 text-white' : 'bg-slate-200 text-slate-400') 
                                   : 'bg-slate-200 text-slate-700 hover:bg-emerald-500 hover:text-white'
@@ -842,7 +835,7 @@
                             <button 
                               disabled={isAnswered}
                               onClick={() => handleTfAnswer(idx, false)}
-                              className={`px-5 py-2.5 rounded-xl font-black text-sm md:text-base transition-all cursor-pointer ${
+                              className={`px-3 py-1 rounded-lg font-black text-xs transition-all cursor-pointer ${
                                 isAnswered 
                                   ? (tfAnswers[idx] === false ? 'bg-rose-600 text-white' : 'bg-slate-200 text-slate-400') 
                                   : 'bg-slate-200 text-slate-700 hover:bg-rose-500 hover:text-white'
@@ -854,7 +847,7 @@
                         </div>
 
                         {isAnswered && (
-                          <div className={`mt-3 text-sm md:text-base p-3 rounded-xl font-medium ${isCorrect ? 'bg-emerald-100 text-emerald-950' : 'bg-rose-100 text-rose-950'}`}>
+                          <div className={`mt-1.5 text-[11px] p-1.5 rounded-lg font-medium leading-tight ${isCorrect ? 'bg-emerald-100 text-emerald-950' : 'bg-rose-100 text-rose-950'}`}>
                             <strong>{isCorrect ? '✅ Вірно!' : '❌ Помилка.'}</strong> {q.explanation}
                           </div>
                         )}
@@ -867,7 +860,7 @@
 
           case 10:
             return (
-              <div className="w-full max-w-5xl mx-auto">
+              <div className="w-full max-w-6xl mx-auto">
                 <TitleBadge 
                   text='Гра "Знайди пару"' 
                   color="bg-indigo-600" 
@@ -875,11 +868,10 @@
                   subtitle="Співставте опис поняття з його назвою (4 бали)"
                 />
 
-                <div className="bg-white rounded-3xl p-6 md:p-8 shadow-2xl border-4 border-indigo-200 max-h-[70vh] overflow-y-auto">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {/* Questions */}
-                    <div className="space-y-4">
-                      <h4 className="text-center font-black text-sm md:text-base text-indigo-600 uppercase tracking-wider mb-2">
+                <div className="bg-white rounded-2xl p-5 shadow-xl border-2 border-indigo-200">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <h4 className="text-center font-black text-xs text-indigo-600 uppercase tracking-wider mb-1">
                         Опис / Визначення
                       </h4>
                       {matchQuestions.map((q) => {
@@ -891,24 +883,23 @@
                             key={q.id}
                             disabled={isMatched}
                             onClick={() => handleMatchSelect('q', q.id)}
-                            className={`w-full text-left p-4 md:p-5 rounded-2xl border-2 font-bold text-sm md:text-lg transition-all relative cursor-pointer ${
+                            className={`w-full text-left p-3 rounded-xl border-2 font-bold text-xs md:text-sm transition-all relative cursor-pointer ${
                               isMatched 
                                 ? 'bg-emerald-50 border-emerald-400 text-emerald-900 opacity-80' 
                                 : isSelected 
-                                  ? 'bg-indigo-100 border-indigo-500 text-indigo-950 shadow-md scale-[1.02]' 
+                                  ? 'bg-indigo-100 border-indigo-500 text-indigo-950 shadow-sm' 
                                   : 'bg-slate-50 border-slate-200 text-slate-800 hover:border-indigo-300'
                             }`}
                           >
                             {q.text}
-                            {isMatched && <i className="fa-solid fa-circle-check text-emerald-500 absolute right-4 top-1/2 transform -translate-y-1/2 text-xl"></i>}
+                            {isMatched && <i className="fa-solid fa-circle-check text-emerald-500 absolute right-3 top-1/2 transform -translate-y-1/2 text-base"></i>}
                           </button>
                         );
                       })}
                     </div>
 
-                    {/* Answers */}
-                    <div className="space-y-4">
-                      <h4 className="text-center font-black text-sm md:text-base text-indigo-600 uppercase tracking-wider mb-2">
+                    <div className="space-y-2">
+                      <h4 className="text-center font-black text-xs text-indigo-600 uppercase tracking-wider mb-1">
                         Термін / Поняття
                       </h4>
                       {matchAnswers.map((a) => {
@@ -920,7 +911,7 @@
                             key={a.id}
                             disabled={!isSelectable && !isMatched}
                             onClick={() => handleMatchSelect('a', a.id)}
-                            className={`w-full text-center p-4 md:p-5 rounded-2xl border-2 font-black text-sm md:text-lg transition-all ${
+                            className={`w-full text-center p-3 rounded-xl border-2 font-black text-xs md:text-sm transition-all ${
                               isMatched 
                                 ? 'bg-emerald-50 border-emerald-400 text-emerald-900 opacity-80 cursor-default' 
                                 : isSelectable 
@@ -936,7 +927,7 @@
                   </div>
 
                   {Object.keys(matchedPairs).length === matchQuestions.length && (
-                    <div className="mt-6 bg-emerald-500 text-white text-center p-5 rounded-2xl font-black text-xl md:text-2xl animate-bounce shadow-lg">
+                    <div className="mt-4 bg-emerald-500 text-white text-center p-3 rounded-xl font-black text-base animate-bounce shadow-md">
                       🎉 Чудово! Усі поняття успішно з'єднано! (+4 бали)
                     </div>
                   )}
@@ -946,47 +937,46 @@
 
           case 11:
             return (
-              <div className="w-full max-w-5xl mx-auto py-2">
+              <div className="w-full max-w-5xl mx-auto py-1">
                 {showConfetti && <ConfettiEffect />}
 
-                <div id="certificate-print-area" className="bg-white rounded-3xl p-6 md:p-12 shadow-2xl border-8 border-indigo-600 relative overflow-hidden text-center max-h-[75vh] overflow-y-auto">
+                <div id="certificate-print-area" className="bg-white rounded-2xl p-5 md:p-8 shadow-xl border-4 border-indigo-600 relative overflow-hidden text-center">
                   
-                  <i className="fa-solid fa-award text-indigo-100 text-[22rem] absolute -right-16 -bottom-16 opacity-30 pointer-events-none"></i>
+                  <i className="fa-solid fa-award text-indigo-100 text-[16rem] absolute -right-12 -bottom-12 opacity-30 pointer-events-none"></i>
 
-                  <div className="flex justify-center items-center mb-4">
-                    <div className="flex items-center gap-2 text-indigo-700 font-black text-sm md:text-lg uppercase tracking-widest">
-                      <i className="fa-solid fa-graduation-cap text-2xl"></i> Офіційний навчальний сертифікат • 9 Клас
+                  <div className="flex justify-center items-center mb-2">
+                    <div className="flex items-center gap-2 text-indigo-700 font-black text-xs md:text-sm uppercase tracking-widest">
+                      <i className="fa-solid fa-graduation-cap text-lg"></i> Офіційний навчальний сертифікат • 9 Клас
                     </div>
                   </div>
 
-                  <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-wider uppercase mb-2">
+                  <h2 className="text-3xl md:text-5xl font-black text-slate-900 tracking-wider uppercase mb-1">
                     Сертифікат Успіху
                   </h2>
-                  <p className="text-indigo-700 font-extrabold text-base md:text-xl uppercase tracking-widest mb-6">
+                  <p className="text-indigo-700 font-extrabold text-xs md:text-base uppercase tracking-widest mb-4">
                     З курсу «Планування — фундамент успіху в бізнесі»
                   </p>
 
-                  <div className="my-6 py-6 border-y-4 border-indigo-200 bg-indigo-50/50 rounded-3xl">
-                    <p className="text-slate-600 text-base md:text-lg font-bold mb-2">Цим засвідчується, що учень / учениця</p>
-                    <h3 className="text-3xl md:text-5xl font-black text-slate-900 underline decoration-indigo-500 decoration-4 underline-offset-8">
+                  <div className="my-3 py-4 border-y-2 border-indigo-200 bg-indigo-50/50 rounded-2xl">
+                    <p className="text-slate-600 text-xs md:text-sm font-bold mb-1">Цим засвідчується, що учень / учениця</p>
+                    <h3 className="text-2xl md:text-4xl font-black text-slate-900 underline decoration-indigo-500 decoration-4 underline-offset-4">
                       {userName.trim() ? userName : "Учень / Учениця 9 класу"}
                     </h3>
-                    <p className="text-slate-700 text-base md:text-xl mt-4 font-semibold leading-relaxed">
+                    <p className="text-slate-700 text-xs md:text-base mt-2 font-semibold leading-relaxed max-w-3xl mx-auto">
                       успішно пройшов(ла) практичний курс з планування, опанував(ла) інструменти тайм-менеджменту та готов(а) будувати власні бізнес-проєкти.
                     </p>
                   </div>
 
-                  {/* Score Display */}
-                  <div className="flex flex-col md:flex-row items-center justify-center gap-6 my-6">
-                    <div className="bg-slate-900 text-white p-5 rounded-2xl flex items-center gap-4 shadow-xl">
-                      <i className="fa-solid fa-trophy text-amber-400 text-4xl"></i>
+                  <div className="flex flex-col md:flex-row items-center justify-center gap-4 my-3">
+                    <div className="bg-slate-900 text-white p-3 px-5 rounded-xl flex items-center gap-3 shadow-md">
+                      <i className="fa-solid fa-trophy text-amber-400 text-2xl"></i>
                       <div className="text-left">
-                        <div className="text-xs md:text-sm text-slate-400 font-bold">Результат випробувань</div>
-                        <div className="text-3xl font-black text-amber-300">{score} з {maxScore} балів</div>
+                        <div className="text-[10px] text-slate-400 font-bold uppercase">Результат випробувань</div>
+                        <div className="text-xl font-black text-amber-300">{score} з {maxScore} балів</div>
                       </div>
                     </div>
 
-                    <div className="flex gap-2 text-3xl md:text-4xl">
+                    <div className="flex gap-1.5 text-2xl">
                       {[...Array(5)].map((_, i) => (
                         <i 
                           key={i} 
@@ -996,13 +986,12 @@
                     </div>
                   </div>
 
-                  {/* Recommendations */}
-                  <div className="bg-indigo-50 border-2 border-indigo-200 rounded-3xl p-6 my-6 text-left space-y-3">
-                    <h4 className="font-black text-indigo-950 text-lg md:text-2xl flex items-center gap-3">
-                      <i className="fa-solid fa-face-smile text-indigo-600 text-3xl"></i>
+                  <div className="bg-indigo-50 border border-indigo-200 rounded-2xl p-3 my-3 text-left space-y-1">
+                    <h4 className="font-black text-indigo-950 text-xs md:text-sm flex items-center gap-2">
+                      <i className="fa-solid fa-face-smile text-indigo-600 text-lg"></i>
                       Підсумок та рекомендації:
                     </h4>
-                    <p className="text-slate-800 text-base md:text-xl leading-relaxed font-semibold">
+                    <p className="text-slate-800 text-xs md:text-sm leading-relaxed font-semibold">
                       {score >= 10 
                         ? "🎉 Блискучий результат! Ви майстерно орієнтуєтеся в Матриці Ейзенхауера, принципі 80/20 та володієте техніками запобігання прокрастинації!"
                         : score >= 6
@@ -1012,20 +1001,19 @@
                     </p>
                   </div>
 
-                  {/* Print & Fireworks Actions */}
-                  <div className="flex flex-wrap justify-center gap-4 mt-6 no-print">
+                  <div className="flex flex-wrap justify-center gap-3 mt-3 no-print">
                     <button 
                       onClick={triggerCelebration}
-                      className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-black text-base md:text-lg px-8 py-4 rounded-full shadow-lg flex items-center gap-3 transition-transform active:scale-95 cursor-pointer"
+                      className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-black text-sm px-6 py-2.5 rounded-full shadow-md flex items-center gap-2 transition-transform active:scale-95 cursor-pointer"
                     >
-                      <i className="fa-solid fa-wand-magic-sparkles text-2xl"></i> Святковий салют!
+                      <i className="fa-solid fa-wand-magic-sparkles text-base"></i> Святковий салют!
                     </button>
 
                     <button 
                       onClick={() => window.print()}
-                      className="bg-slate-800 hover:bg-slate-900 text-white font-black text-base md:text-lg px-8 py-4 rounded-full shadow-lg flex items-center gap-3 transition-transform active:scale-95 cursor-pointer"
+                      className="bg-slate-800 hover:bg-slate-900 text-white font-black text-sm px-6 py-2.5 rounded-full shadow-md flex items-center gap-2 transition-transform active:scale-95 cursor-pointer"
                     >
-                      <i className="fa-solid fa-print text-2xl"></i> Друк сертифіката
+                      <i className="fa-solid fa-print text-base"></i> Друк сертифіката
                     </button>
                   </div>
 
@@ -1039,26 +1027,26 @@
       };
 
       return (
-        <div className="min-h-screen w-full bg-gradient-to-br from-slate-100 via-slate-50 to-indigo-50 text-slate-800 flex flex-col justify-between overflow-x-hidden">
+        <div className="h-screen w-full bg-gradient-to-br from-slate-100 via-slate-50 to-indigo-50 text-slate-800 flex flex-col justify-between overflow-hidden">
           
           {/* Header */}
-          <header className="w-full bg-white/80 backdrop-blur-md border-b border-slate-200 px-4 md:px-8 py-4 flex justify-between items-center sticky top-0 z-40 shadow-sm no-print">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-indigo-600 text-white rounded-2xl flex items-center justify-center font-black text-2xl shadow-md">
+          <header className="w-full bg-white/80 backdrop-blur-md border-b border-slate-200 px-4 py-2.5 flex justify-between items-center sticky top-0 z-40 shadow-sm no-print">
+            <div className="flex items-center gap-2.5">
+              <div className="w-9 h-9 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-black text-lg shadow-sm">
                 П
               </div>
               <div>
-                <h1 className="font-black text-base md:text-xl text-slate-800 leading-tight">
+                <h1 className="font-black text-sm md:text-base text-slate-800 leading-tight">
                   Планування — фундамент успіху
                 </h1>
-                <p className="text-xs md:text-sm text-slate-500 font-bold">Інтерактивний урок </p>
+                <p className="text-[11px] text-slate-500 font-bold">Інтерактивний урок </p>
               </div>
             </div>
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
               <button 
                 onClick={() => setSoundEnabled(!soundEnabled)}
-                className={`w-12 h-12 rounded-2xl border-2 flex items-center justify-center transition-all cursor-pointer text-lg ${
+                className={`w-9 h-9 rounded-xl border flex items-center justify-center transition-all cursor-pointer text-base ${
                   soundEnabled ? 'bg-indigo-100 border-indigo-300 text-indigo-800' : 'bg-slate-100 border-slate-300 text-slate-400'
                 }`}
                 title={soundEnabled ? "Вимкнути звук" : "Увімкнути звук"}
@@ -1066,7 +1054,7 @@
                 <i className={`fa-solid ${soundEnabled ? 'fa-volume-high' : 'fa-volume-xmark'}`}></i>
               </button>
 
-              <div className="bg-indigo-400/20 border-2 border-indigo-500 px-4 py-2 rounded-2xl flex items-center gap-2 font-black text-base md:text-lg text-slate-800 shadow-sm">
+              <div className="bg-indigo-400/20 border border-indigo-500 px-3 py-1 rounded-xl flex items-center gap-1.5 font-black text-sm text-slate-800 shadow-sm">
                 <i className="fa-solid fa-star text-amber-500"></i>
                 <span>{score}/{maxScore}</span>
               </div>
@@ -1074,16 +1062,16 @@
           </header>
 
           {/* Main Slide Body */}
-          <main className="flex-1 flex items-center justify-center p-4 md:p-8">
+          <main className="flex-1 flex items-center justify-center p-3 md:p-4 overflow-hidden">
             {renderSlideContent()}
           </main>
 
           {/* Navigation Bar */}
-          <footer className="w-full bg-white/90 backdrop-blur border-t border-slate-200 px-4 md:px-8 py-4 flex items-center justify-between z-40 shadow-sm no-print">
+          <footer className="w-full bg-white/90 backdrop-blur border-t border-slate-200 px-4 py-2.5 flex items-center justify-between z-40 shadow-sm no-print">
             <button 
               onClick={prevSlide}
               disabled={currentSlide === 0}
-              className={`flex items-center gap-2 px-6 py-3 rounded-full font-black text-base transition-all cursor-pointer ${
+              className={`flex items-center gap-1.5 px-4 py-2 rounded-full font-black text-xs md:text-sm transition-all cursor-pointer ${
                 currentSlide === 0 
                   ? 'text-slate-300 cursor-not-allowed' 
                   : 'text-slate-700 bg-slate-100 hover:bg-indigo-600 hover:text-white shadow-sm'
@@ -1093,7 +1081,7 @@
             </button>
 
             {/* Slide Pagination Dots */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1.5">
               {[...Array(totalSlides + 1)].map((_, i) => (
                 <button
                   key={i}
@@ -1101,10 +1089,10 @@
                     playAudioCue('click', soundEnabled);
                     setCurrentSlide(i);
                   }}
-                  className={`h-3 rounded-full transition-all cursor-pointer ${
+                  className={`h-2.5 rounded-full transition-all cursor-pointer ${
                     currentSlide === i 
-                      ? 'w-10 bg-indigo-600' 
-                      : 'w-3 bg-slate-300 hover:bg-slate-400'
+                      ? 'w-8 bg-indigo-600' 
+                      : 'w-2.5 bg-slate-300 hover:bg-slate-400'
                   }`}
                   title={`Слайд ${i + 1}`}
                 />
@@ -1114,7 +1102,7 @@
             <button 
               onClick={nextSlide}
               disabled={currentSlide === totalSlides}
-              className={`flex items-center gap-2 px-6 py-3 rounded-full font-black text-base transition-all cursor-pointer ${
+              className={`flex items-center gap-1.5 px-4 py-2 rounded-full font-black text-xs md:text-sm transition-all cursor-pointer ${
                 currentSlide === totalSlides 
                   ? 'text-slate-300 cursor-not-allowed' 
                   : 'text-white bg-indigo-600 hover:bg-indigo-700 shadow-md'
